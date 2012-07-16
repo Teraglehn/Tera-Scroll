@@ -1,0 +1,30 @@
+.scrollable {
+	overflow: hidden;
+}
+.scrollable .content {
+	margin: 0px;
+	padding: 0px;
+	margin-right: 7px;
+}
+.scrollbar {
+	border-radius: 20px;
+	background-color: rgba(0, 0, 0, 0.5);
+	cursor: pointer;
+	float:left;
+	width:5px;
+}
+.scrollbar_drag {
+	-webkit-box-shadow:  1px 1px 5px 0px rgba(0, 0, 0, 0.5);
+	box-shadow:  1px 1px 5px 0px rgba(0, 0, 0, 0.5);
+
+}
+.scrollbar2 {
+	border-radius:2px;
+	background-color: rgba(255, 100, 100, 0.5);
+	cursor: pointer;
+	float:left;
+	width:7px;
+}
+.scrollbar2_drag {
+	background-color: rgba(255, 100, 255, 0.5);
+}
