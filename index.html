@@ -1,35 +1,299 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="fr">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Scroll</title>
+<title>TeraScroll, la scrollbar facile !</title>
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
 <link href="scroll.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
-<script type="text/javascript" src="jquery.mousewheel.js"></script>
+<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="jquery.mousewheel.min.js"></script>
 </head>
 
 <body>
-	<div id="un" style="width: 200px; height: 300px; border: 1px solid grey;">
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed ullamcorper arcu. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed varius pellentesque erat et ornare. Proin tellus magna, sodales et sollicitudin sed, gravida id mauris. Praesent a neque quis neque viverra sagittis. Cras a consequat diam. Aenean convallis, mauris ut tempus condimentum, mauris tortor condimentum diam, nec venenatis magna arcu quis ipsum. Aliquam molestie sodales urna, et vestibulum metus luctus nec. Proin congue sapien adipiscing nisl lobortis eu aliquet urna vestibulum.
-		Proin id velit tortor, sit amet rhoncus velit. Nunc pulvinar ultrices lacinia. Sed vulputate dapibus ante, et scelerisque massa consectetur sed. Morbi est massa, facilisis non consectetur ac, vehicula vel nunc. Mauris a enim at ante faucibus bibendum at ac dolor. Duis semper scelerisque mattis. Curabitur ultrices, nibh ac varius congue, arcu sapien aliquam orci, eu aliquam ipsum arcu ut purus. Donec nisi nisl, fringilla id volutpat et, pulvinar cursus lacus. Sed ac fringilla turpis. Aliquam tincidunt purus nec justo facilisis vitae consectetur mauris sagittis. Sed felis lacus, ultricies nec consectetur in, gravida sit amet eros. Etiam lectus enim, vulputate sit amet ultrices vitae, pharetra quis mauris. Sed sed elit ligula, ac vestibulum nunc. Aliquam erat volutpat. In sodales sem a velit eleifend sed sollicitudin mauris convallis. In sed commodo magna.
-		Phasellus rutrum, tortor bibendum interdum porttitor, nunc risus sagittis ante, nec ornare metus purus non tortor. Mauris mattis sodales tellus, eu ultricies sem congue at. Duis laoreet libero quis augue venenatis non pharetra diam egestas. Aliquam erat volutpat. Nulla fringilla, nibh nec adipiscing semper, diam risus tempus metus, in rhoncus turpis dolor in mauris. Cras mattis pharetra cursus. Aliquam vulputate metus mi.
-		Maecenas semper tincidunt eros eget adipiscing. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam sodales convallis ultrices. Vivamus ornare risus ante. Sed porttitor fringilla eros nec sagittis. In congue lobortis tempor. Phasellus eget quam nec sapien accumsan consectetur quis in eros. Donec commodo quam eu orci convallis tempus. Praesent sem lorem, posuere at aliquet non, aliquam non sem.
-		Aenean justo sem, adipiscing a condimentum a, mattis vel erat. Morbi sit amet lectus turpis, eget vulputate massa. Etiam elit nisl, semper eget tempus at, cursus ac nisl. Morbi sed neque ante. Curabitur libero leo, hendrerit sed aliquam ut, tincidunt a magna. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris dolor nisl, luctus ut cursus a, aliquam in quam. Integer porta nulla at eros fermentum ullamcorper. Etiam vitae dui sed odio aliquet hendrerit id in enim.
+	<div class="navbar navbar-fixed-top">
+	 	<div class="navbar-inner">
+	 		<div class="container">
+	 			<a class="brand" href="index.html">
+					TeraScroll
+				</a>
+				<ul class="nav">
+					<li class="divider-vertical"></li>
+  					<li class="dropdown" id="menu-prerequis">
+					    <a class="dropdown-toggle" data-toggle="dropdown">
+					    	  Prérequis
+					     	 <b class="caret"></b>
+					    </a>
+					    <ul class="dropdown-menu">
+					      	<li><a href="#jquery">Jquery</a></li>
+					      	<li><a href="#jqueryui">Jquery UI</a></li>
+					      	<li><a href="#mousewheel">MouseWheel</a></li>
+					      	<li><a href="#terascroll">TeraScroll</a></li>
+					      	<li class="divider"></li>
+					      	<li><a href="#resume">Résumé</a></li>
+						</ul>
+					</li>
+  					<li><a href="#config">Configuration</a></li>
+				</ul>
+				<ul class="nav pull-right">
+					<li><a href="#comment">Commentaires</a></li>
+					<li class="divider-vertical"></li>
+					<li><a href="demo.html">Démo</a></li>
+				</ul>
+			</div>
+		</div>
 	</div>
-	<div id="deux" style="width: 300px; height: 200px; border: 1px solid grey;margin-top: 2px;">
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed ullamcorper arcu. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed varius pellentesque erat et ornare. Proin tellus magna, sodales et sollicitudin sed, gravida id mauris. Praesent a neque quis neque viverra sagittis. Cras a consequat diam. Aenean convallis, mauris ut tempus condimentum, mauris tortor condimentum diam, nec venenatis magna arcu quis ipsum. Aliquam molestie sodales urna, et vestibulum metus luctus nec. Proin congue sapien adipiscing nisl lobortis eu aliquet urna vestibulum.
-		Proin id velit tortor, sit amet rhoncus velit. Nunc pulvinar ultrices lacinia. Sed vulputate dapibus ante, et scelerisque massa consectetur sed. Morbi est massa, facilisis non consectetur ac, vehicula vel nunc. Mauris a enim at ante faucibus bibendum at ac dolor. Duis semper scelerisque mattis. Curabitur ultrices, nibh ac varius congue, arcu sapien aliquam orci, eu aliquam ipsum arcu ut purus. Donec nisi nisl, fringilla id volutpat et, pulvinar cursus lacus. Sed ac fringilla turpis. Aliquam tincidunt purus nec justo facilisis vitae consectetur mauris sagittis. Sed felis lacus, ultricies nec consectetur in, gravida sit amet eros. Etiam lectus enim, vulputate sit amet ultrices vitae, pharetra quis mauris. Sed sed elit ligula, ac vestibulum nunc. Aliquam erat volutpat. In sodales sem a velit eleifend sed sollicitudin mauris convallis. In sed commodo magna.
-		Phasellus rutrum, tortor bibendum interdum porttitor, nunc risus sagittis ante, nec ornare metus purus non tortor. Mauris mattis sodales tellus, eu ultricies sem congue at. Duis laoreet libero quis augue venenatis non pharetra diam egestas. Aliquam erat volutpat. Nulla fringilla, nibh nec adipiscing semper, diam risus tempus metus, in rhoncus turpis dolor in mauris. Cras mattis pharetra cursus. Aliquam vulputate metus mi.
-		Maecenas semper tincidunt eros eget adipiscing. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam sodales convallis ultrices. Vivamus ornare risus ante. Sed porttitor fringilla eros nec sagittis. In congue lobortis tempor. Phasellus eget quam nec sapien accumsan consectetur quis in eros. Donec commodo quam eu orci convallis tempus. Praesent sem lorem, posuere at aliquet non, aliquam non sem.
-		Aenean justo sem, adipiscing a condimentum a, mattis vel erat. Morbi sit amet lectus turpis, eget vulputate massa. Etiam elit nisl, semper eget tempus at, cursus ac nisl. Morbi sed neque ante. Curabitur libero leo, hendrerit sed aliquam ut, tincidunt a magna. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris dolor nisl, luctus ut cursus a, aliquam in quam. Integer porta nulla at eros fermentum ullamcorper. Etiam vitae dui sed odio aliquet hendrerit id in enim.
-	</div>
-	<div class="info"></div>
-	<script type="text/javascript" src="scroll.js"></script>
+	<div class="container">
+		<div class="hero-unit" id="top">
+		 	<h1>TeraScroll</h1>
+		 	<p>Un système de scrollbar développé par Teraglehn, simple, rapide à utliser, configurable et surtout ergonomique, ce script répond aux attentes des plus fainéant comme des plus rigoureux.<br>
+		 	Compatibilité : <img src="http://www.grafilog.com/wp-content/uploads/2010/11/browser_logos-256.png" alt="" style="height:30px;">
+		 	</p>
+			<a class="btn btn-success btn-large" href="demo.html">
+	     		Démo
+	    	</a>
+		</div>
+		<div class="row">
+			<div class="span9">
+				<div class="page-header" id="prerequis"><h2>Prérequis<small>, Jquery, Jquery UI, etc...</small></h2></div>
+				<p>
+					Afin de faire fonctionner le script de scrollbar vous aurez besoin d'inclure dans votre page certaine bibliothèques, bien connu pour certaine, et bien moins pour d'autre.<br><br>
+				</p>
+
+				<div class="page-header"><h3 id="jquery"><img src="http://elrow.lescigales.org/img/jquery-logo.png" alt=""> Jquery</h3></div>
+				<p>Vous aurez besoin de la bibliothèque <a href="http://www.jquery.com" target="_blank">Jquery</a> 1.7+, pour l'inclure dans votre page, deux solution :</p>
+				<ul>
+					<li>Téléchargez la bibliothèque <a href="http://code.jquery.com/jquery-1.7.min.js">ici</a> et chargez la dans votre page depuis votre site :<br><br>
+						<pre>&lt;script type="text/javascript" src="chemin/vers/jquery.js"&gt;&lt;/script&gt;</pre><br>
+					</li>
+					<li>Liez la bibliothèque depuis l'API google :<br><br>
+						<pre>&lt;script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"&gt;&lt;/script&gt;</pre><br>
+					</li>
+				</ul>
+				<p>
+					<div class="alert alert-success">
+						L'avantage de l'API google est que beaucoup de site lient Jquery depuis ce lien, ce qui vas donc favoriser la mise en cache de la bibliothèque dans le navigateur du client.
+					</div>
+				</p>
+			</div>
+			<div class="span3">
+				<div class="page-header" id="prerequis"><h2>Téléchargements</h2></div>
+				<p>
+					Tout les contenu donc vous aurez besoin et leurs versions :
+				</p>
+				<ul>
+					<li><a href="http://jquery.com/">Jquery</a> : 
+						<ul>
+							<li><a href="http://code.jquery.com/jquery-1.7.2.min.js">Version 1.7.2 (minifié)</a></li>
+							<li><a href="http://code.jquery.com/jquery-1.7.2.js">Version 1.7.2 (non minifié)</a></li>
+						</ul>
+					</li>
+					<br>
+					<li><a href="http://jqueryui.com/">Jquery UI</a> :
+						<ul>
+							<li><a href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js">Version 1.8.21 (minifié)</a></li>
+							<li><a href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.js">Version 1.8.21 (non minifié)</a></li>
+							<li><a href="jquery-ui-1.8.21.custom.min.js">Version 1.8.21 Draggable+dependencies (minifié)</a></li>
+						</ul>
+					</li>
+					<br>
+					<li><a href="http://brandonaaron.net/code/mousewheel/docs">MouseWheel</a> : 
+						<ul>
+							<li><a href="jquery.mousewheel.min.js">Version 3.0.6 (minifié)</a></li>
+							<li><a href="jquery.mousewheel.js">Version 3.0.6 (nom minifié)</a></li>
+							<li><a href="https://github.com/brandonaaron/jquery-mousewheel/downloads">Autres version</a></li>
+						</ul>
+					</li>
+					<br>
+					<li>TeraScroll : 
+						<ul>
+							<li><a href="scroll.min.js">Version 1.0 (minifié)</a></li>
+							<li><a href="scroll.js">Version 1.0 (nom minifié)</a></li>
+						</ul>
+					</li>
+					<br>
+					<li><a href="https://developers.google.com/speed/libraries/devguide">Google API</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="row">
+			<div class="span12">
+				<div class="page-header"><h3 id="jqueryui"><img src="http://elrow.lescigales.org/img/jqueryui-logo.png"> Jquery UI</h3></div>
+				<p>Vous aurez également besoin de la bibliothèque <a href="http://jqueryui.com/">Jquery UI</a>, mais uniquement du  module <a href="http://jqueryui.com/demos/draggable/">draggable</a></p>
+				<ul>
+					<li>Téléchargez la bibliothèque <a href="http://jqueryui.com/download">ici</a> et chargez la dans votre page depuis votre site :<br><br>
+						<pre>&lt;script type="text/javascript" src="chemin/vers/jqueryui.js"&gt;&lt;/script&gt;</pre><br>
+						Vous pouvez ne choisir que le module draggable (avec ses dépendances), ou bien prendre toute la bibliothèque.<br>
+					</li>
+					<li>Liez la bibliothèque depuis l'API google :<br><br>
+						<pre>&lt;script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"&gt;&lt;/script&gt;</pre><br>
+					</li>
+				</ul>
+				<p>
+					<div class="alert alert-success">
+						L'avantage de l'API google vaut également pour la bibliothèqe Jquery UI.
+					</div>
+				</p><br>
+
+				<div class="page-header"><h3 id="mousewheel"><img src="favicon.png"> MouseWheel 3.0.6, by <a href="http://brandonaaron.net">Brandon Aaron</a></h3></div>
+				<p>Ce <a href="jquery.mousewheel.min.js">plugin</a> permet de gérer la molette de la souris, si vous ne souhaitez pas utiliser l'utiliser dans vos scrollbar, inutile de télécharger ce <a href="jquery.mousewheel.min.js">plugin</a>.<br>Donc pour inclure ce script dans votre page :<br><pre>&lt;script type="text/javascript" src="chemin/vers/jquery.mousewheel.min.js"&gt;&lt;/script&gt;</pre><br></p>
+
+				<div class="page-header"><h3 id="terascroll"><img src="tera.png" style="width:30px;"> TeraScroll 1.0</h3></div>
+				<p>
+					Voilà donc le coeur du sytème, il contient toute les fonction nécessaire au fonctionnement des scrollbar, à télécharger <a href="scroll.js">ici</a>.
+					<br>Et pour inclure le script dans votre page :<br><pre>&lt;script type="text/javascript" src="chemin/vers/scroll.js"&gt;&lt;/script&gt;</pre><br></p>
+
+				<div class="page-header"><h3 id="resume">Résumé :</h3></div>
+				<p>
+					L'inclusion des différent script doit néanmoins être fait dans un certaine ordre, voici celui conseillé :<br>
+					<pre>&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>	&lt;head&gt; ... &lt;/head&gt;<br>	&lt;body&gt;<br>		...<br><br>		&lt;script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"&gt;&lt;/script&gt;<br>		&lt;script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"&gt;&lt;/script&gt;<br>		&lt;script type="text/javascript" src="chemin/vers/jquery.mousewheel.min.js"&gt;&lt;/script&gt;<br>		&lt;script type="text/javascript" src="chemin/vers/scroll.js"&gt;&lt;/script&gt;<br>	 &lt;/body&gt;<br>&lt;/html&gt;
+					</pre><br>
+					Il n'y a que deux règles :
+				</p>
+				<ul>
+					<li>Jquery doit être le premier lien.</li>
+					<li>Scroll.js doit être le dernier lien.</li>
+				</ul>
+			</div>
+		</div>
+		<div class="row">
+			<div class="span12">
+				<div class="page-header" id="config">
+					<h2>Configuration<small>, mise en place</small></h2>
+				</div>
+				<div class="page-header"><h3>CSS</h3></div><br>
+				<h4>CSS par defaut</h4><br>
+				<p>
+					Le pack contient un css minimaliste, contenant le design d'une scrollbar, et le css nécessaire au fonctionnement du système :<br>
+					<h6>Code : CSS</h6>
+<pre>.scrollable {
+	/* Nécessaire */
+	overflow: hidden;
+}
+.scrollbar {
+	/* Design */
+	border-radius: 20px;
+	background-color: rgba(0, 0, 0, 0.5);
+	cursor: pointer;
+
+	/* Doit être spécifié */
+	width:5px;
+
+	/* Nécessaire */
+	float:left;	
+}</pre>
+				</p>
+				<div class="alert alert-info">
+					Si la largeur de la scrollbar est "0px", alors elle sera invisible, elle ne pourras être déplacée à l'aide du clic souris, mais la molette souris fonctionnera.
+				</div>
+				<h6>Exemple :</h6>
+				<div id="expl1" style="height : 70px; width: 600px; border:1px solid grey; margin-right:auto; margin-left:auto;">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</div><br>
+				<h6>Code :</h6>
+<pre>&lt;div id="expl1" style="height : 50px; width: 600px; border:1px solid grey;"&gt;
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+&lt;/div&gt;
+&lt;script type="text/javascript"&gt;
+	scrollable("#expl1");
+&lt;/script&gt;</pre>
+				<p>
+					Vous pouvez utiliser toute les propriété CSS que vous voulez, il faudra néanmoins ne pas toucher au positionnement.
+				</p><br>
+				<h4>Options Supplémentaire</h4><br>
+				<p>
+					Ajoutez "_drag" à la fin de votre classe de scrollbar, pour faire des effets lors du déplacement de la scrollbar au clic souris. La sélecteur ":hover" fonctionne également.<br>
+				</p>
+				<h6>Exemple :</h6>
+				<div id="expl2" style="height : 50px; width: 600px; border:1px solid grey; margin-right:auto; margin-left:auto;">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</div><br>
+				<h6>Code :</h6>
+<pre>&lt;div id="expl2" style="height : 50px; width: 600px; border:1px solid grey;"&gt;
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+&lt;/div&gt;
+&lt;script type="text/javascript"&gt;
+	scrollable("#expl2", "scrollbar2");
+&lt;/script&gt;</pre>
+				<h6>CSS :</h6>
+<pre>.scrollbar2 {
+	border-radius: 20px;
+	background-color: rgba(0, 0, 0, 0.5);
+	cursor: pointer;
+	float:left;
+	width:5px;
+}
+.scrollbar2_drag {
+	background-color: rgba(255, 100, 255, 0.5);
+
+}</pre>
+				<div class="page-header"><h3>Javascript</h3></div>
+				<p>
+					La scrollbar minimum est initialisée à l'aide de la fonction <strong>scrollable()</strong>, en passant en paramettre un identifiant sous forme de <em>chaine de caractères</em> :<br>
+					<h6>Code : Javascript</h6>
+					<pre>$(document).ready( function(){<br>	scrollable("#Ma_Div");<br>});</pre><br>
+					Vous pouvez ajouter un deuxième argument, afin d'avoir plusieurs scrollbar différente, entrez le nom de la classe :<br><br> 
+					<h6>Code : Javascript</h6>
+					<pre>$(document).ready( function(){<br>	scrollable("#Ma_Div", "scrollbar2");<br>});</pre>
+					<div class="alert alert-info">
+						La classe par défaut est "scrollbar".
+					</div>
+					Enfin vous pouvez ajouter un troisième argument, qui permet de changer la classe du conteneur :<br><br> 
+					<h6>Code : Javascript</h6>
+					<pre>$(document).ready( function(){<br>	scrollable("#Ma_Div", false, "scrollable2");<br>});</pre>
+					<div class="alert alert-info">
+						La classe par défaut est "scrollable".
+					</div>
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="span12">
+				<div class="page-header" id="comment"><h2>Commentaires<small>, laissez un commentaire pour signaler un manque, un bug, une demande, etc...</small></h2></div>
+				<div id="disqus_thread"></div>
+		        <script type="text/javascript">
+		            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+		            var disqus_shortname = 'terascroll'; // required: replace example with your forum shortname
+
+		            /* * * DON'T EDIT BELOW THIS LINE * * */
+		            (function() {
+		                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+		                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		            })();
+		        </script>
+		        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+		        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+			</div>
+		</div>
+	<script type="text/javascript" src="scroll.min.js"></script>
 	<script type="text/javascript">
 		$(document).ready( function(){
-			scrollable("#un");
-			scrollable("#deux", "scrollbar2");
+			$('.dropdown-toggle').dropdown();
+			scrollable("#expl1");
+			scrollable("#expl2", "scrollbar2");
 		});
 	</script>
 </body>

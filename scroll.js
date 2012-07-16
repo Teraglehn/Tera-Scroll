@@ -4,8 +4,8 @@ function scroll(sel){
 	var w = $(sel[2]).width();
 
 	var h = (x <= y) ? 0 : ( 1/( x/y) )*y;
-	h = (h < w) ? w : h;
-
+	h = (h < w && h !=0) ? w : h;
+	
 	var pos = parseInt($(sel[2]).css('top'));
 
 	var scrolTp = ( (x-y) * pos)/(y-h);
@@ -45,35 +45,39 @@ function scrollable(selecteur, scrollclass, scrollable){
 	var w = $(sel[2]).width();
 
 	var h = (x <= y) ? 0 : ( 1/( x/y) )*y;
-	h = (h < w) ? w : h;
+	if(h != 0){
+		h = (h < w) ? w : h;
 
-	$(sel[2]).height(h);
+		$(sel[2]).height(h);
 
-	$(sel[2]).css({ left : $(sel[0]).width() - (w+1), "margin-right" : -w });
+		$(sel[2]).css({ left : $(sel[0]).width() - (w+1), "margin-right" : -w });
+		$(sel[1]).css({ "margin-right" : w+2 })
 
-	$(sel[2]).draggable({ 
-		axis : "y", 
-		containment: sel[0],
+		$(sel[2]).draggable({ 
+			axis : "y", 
+			containment: sel[0],
 
-		start: function(event, ui) {
-			$(sel[2]).addClass(scrollclass+"_drag");
-		},
+			start: function(event, ui) {
+				$(sel[2]).addClass(scrollclass+"_drag");
+			},
 
-		drag : function(event, ui){
+			drag : function(event, ui){
+				scroll(sel);
+			},
+
+			stop: function(event, ui) {
+				$(sel[2]).removeClass(scrollclass+"_drag");
+			}
+		});
+
+
+		$(sel[0]).bind('mousewheel', function(event, delta) {
+
+			move(sel, delta);
+
 			scroll(sel);
-		},
-
-		stop: function(event, ui) {
-			$(sel[2]).removeClass(scrollclass+"_drag");
-		}
-	});
-
-
-	$(sel[0]).bind('mousewheel', function(event, delta) {
-
-		move(sel, delta);
-
-		scroll(sel);
-		return false;
-	});
+			return false;
+		});
+	}
+	
 }
