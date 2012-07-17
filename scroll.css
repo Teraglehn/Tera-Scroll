@@ -1,39 +1,18 @@
+/* Nécessaire au fonctionnement */
 .scrollable {
 	overflow: hidden;
 }
-.scrollable .content {
-}
 .scrollbar {
+	float:left;
+
+/* Doit être sépcifié */
+	width:5px;
+
+/* Design de la scrollbar */
+
 	-webkit-border-radius: 20px;
     border-radius: 20px;
-
 	background-color: rgba(0, 0, 0, 0.5);
 	cursor: pointer;
-	float:left;
-	width:5px;
-}
-.scrollbar2 {
-	-webkit-border-radius: 20px;
-    border-radius: 20px;
-	background-color: rgba(0, 0, 0, 0.5);
-	cursor: pointer;
-	float:left;
-	width:5px;
-}
-.scrollbar2_drag {
-	background-color: rgba(255, 100, 255, 0.5);
 
-}
-.scrollbar3 {
-	border-radius:2px;
-	background-color: rgba(255, 100, 100, 0.5);
-	cursor: pointer;
-	float:left;
-	width:7px;
-}
-.scrollbar3_drag {
-	background-color: rgba(255, 100, 255, 0.5);
-}
-p {
-	text-indent: 1em;
 }

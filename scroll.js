@@ -1,3 +1,12 @@
+/*
+	Plugin TeraScroll V1.0 - Par Teraglehn (http://www.lepalaisdumaking.com/TeraScroll)
+
+	Ce plugin est mis à disposition selon les termes de la licence 
+	Creative Commons Attribution (http://creativecommons.org/licenses/by-nc-sa/3.0/fr/)
+		- Pas d'Utilisation Commerciale 
+		- Partage dans les Mêmes Conditions 3.0 France.
+	Les autorisations au-delà du champ de cette licence peuvent être obtenues à teraglehn@gmail.com.
+*/
 function scroll(sel){
 	var y = $(sel[0]).height();
 	var x = $(sel[1]).height();
