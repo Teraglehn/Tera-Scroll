@@ -11,12 +11,17 @@ Compatible avec tout les navigateur dernière génération
 Versions
 --------
 
+- 2.1, le 26/07/2012.
 - 2.0, le 18/07/2012.
 - 1.0, le 17/07/2012.
 
 
 Historique
 ----------
+
+### V2.1 -
+- Débloquage du scroll naturel de la page en fin de course.
+- Possibilité de changer la vitesse de scroll à la molette.
 
 ### V2.0 -
 - Sémantique conforme aux plugins Jquery.
@@ -52,12 +57,15 @@ Ici, les bloc dont les id sont "un", "deux" et "trois", ainsi que les bloc avec 
 ### Options :
 
 - scrollclass : classe de la scrollbar, permet de changer le design de la scrollbar, par defaut "scrollbar".
-- scrollable : classe du conteneur, permet de changer le design du conteneur, par defaut "scrollable".
+- scrollable  : classe du conteneur, permet de changer le design du conteneur, par defaut "scrollable".
+- speed       : vitesse en ligne par cran de molette, permet de changer la vitesse de défilement.
 
 
 Fonctionnalités
 ---------------
 
+- Débloquage du scroll de page quand fin de course.
+- Vitesse de défilement modifiable.
 - Infinité de scrollbar.
 - Scroll à la molette de souris.
 - Scroll au clic souris sur la scrollbar
