@@ -5,7 +5,7 @@ Un plugin de scrollbar en Jquery, développé par Teraglehn, simple, rapide à u
 
 Compatible avec tout les navigateur dernière génération
 
-[Présentation](http://www.lepalaisdumaking.com/TeraScroll/)
+[Présentation](http://terazaky.fr/TeraScroll/)
 
 
 Versions
